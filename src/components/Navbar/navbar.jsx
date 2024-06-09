@@ -8,7 +8,7 @@ const navbar = () => {
     <>
     <nav>
       <div className="nav-left">
-        <Link to="/" className='logo'><img src="/public/logo.png" alt="real-estate" />
+        <Link to="/" className='logo'><img src="//logo.png" alt="real-estate" />
         <span>Real Estate</span>
         </Link>
         <Link to='/home'>Home</Link>
@@ -22,7 +22,7 @@ const navbar = () => {
        <Link to='/signin' >Sign in</Link>
        <Link to='/signup' className='btn'>Sign up</Link>
        <div className="menuIcon">
-        <img src="../../public/menu.png" alt="menu-icon" onClick={()=>setOpen(prev => !prev)} />
+        <img src="/menu.png" alt="menu-icon" onClick={()=>setOpen(prev => !prev)} />
        </div>
        <div className={ open ? "menu active" : "menu"}>
        <a href="">Home</a>

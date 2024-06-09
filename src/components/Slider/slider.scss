@@ -1,0 +1,93 @@
+@import '../../responsive.scss';
+
+.slider {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  gap: 20px;
+ 
+  .fullSlider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    z-index: 100;
+    .arrow {
+        flex: 1 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        img {
+          width: 50px;
+            @include md {
+              width: 30px;
+              
+            }
+            @include sm {
+              width: 20px;
+              
+            }
+        }
+        .right {
+            transform: rotate(180deg);
+        }
+    }
+    .imageContainer {
+        flex: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 90%;
+            height: 90%;
+            cursor: pointer;
+            
+            
+        }
+    }
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        font-size: 34px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .bigImage {
+    flex-basis: 75%;
+  }
+  .smallImage {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 25%;
+    
+    gap: 20px;
+    img {
+      width: 130px;
+      height: 100px;
+      cursor: pointer;
+      object-fit: cover;
+    }
+  }
+}

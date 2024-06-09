@@ -1,0 +1,14 @@
+@import '../../responsive.scss';
+.map {
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+@include sm {
+    .map {
+        display: none;
+    }
+    .mapcontainer {
+        display: none;
+    }
+}

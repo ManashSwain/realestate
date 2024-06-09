@@ -1,0 +1,120 @@
+@import "../../responsive.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  font-size: 18px;
+
+  a {
+    @include sm {
+      display: none;
+    }
+
+    @include md {
+      span {
+        display: none;
+      }
+    }
+    @include sm {
+      span {
+        display: initial;
+      }
+    }
+  }
+
+  .nav-left {
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    padding: 0px 20px;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    img {
+      width: 28px;
+    }
+  }
+
+  .nav-right {
+    flex-basis: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    padding: 0px 20px;
+    background-color: #fcf5f3;
+
+    @include md {
+      background-color: transparent;
+    }
+
+    .btn {
+      color: white;
+      background-color: #fece51;
+      padding: 6px 12px;
+      border-radius: 3px;
+      transition: all 0.5s ease;
+    }
+
+    .btn:hover {
+      scale: 1.1;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 10;
+
+      img {
+        width: 28px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: initial;
+      }
+    }
+
+    .menu {
+      color: white;
+      background-color: black;
+      height: 100vh;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: -50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 50px;
+      padding: 20% 0px;
+      transition: all 1s ease;
+
+      &.active {
+        right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+
+      @include md {
+        a {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

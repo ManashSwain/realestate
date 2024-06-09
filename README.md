@@ -15,7 +15,7 @@ Table of Contents
 
 Demo
 
-You can check out the live demo of the app here : 
+You can check out the live demo of the app here : https://realestate-phi-liart.vercel.app/
 
 Features
 
@@ -32,8 +32,8 @@ To run this project locally, follow these steps:
 
 
 
-git clone https://github.com/yourusername/real-estate-app.git
-cd real-estate-app
+git clone https://github.com/ManashSwain/realestate.git
+cd realestate
 
 Install dependencies:
 
